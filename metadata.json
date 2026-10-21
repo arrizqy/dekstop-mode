@@ -1,0 +1,8 @@
+{
+  "name": "Xiaomi Pad 6 DeX Workstation",
+  "description": "Mode Desktop Multitasking untuk Xiaomi Pad 6 dengan multi-window, drag & drop antar jendela, taskbar responsif, optimasi RAM, dan dukungan mouse/keyboard eksternal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

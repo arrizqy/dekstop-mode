@@ -1,0 +1,285 @@
+import { AppDefinition, FileItem, SystemNotification, SystemSettings } from '../types/desktop';
+
+export const INITIAL_APPS: AppDefinition[] = [
+  {
+    id: 'files',
+    name: 'Pengelola Berkas',
+    icon: 'folder',
+    category: 'productivity',
+    defaultWidth: 780,
+    defaultHeight: 520,
+    minWidth: 480,
+    minHeight: 360,
+    baseRamMb: 110,
+    description: 'Akses penyimpanan internal Xiaomi Pad 6 dan kartu memori',
+  },
+  {
+    id: 'notes',
+    name: 'Catatan Pad 6',
+    icon: 'file-text',
+    category: 'productivity',
+    defaultWidth: 740,
+    defaultHeight: 540,
+    minWidth: 420,
+    minHeight: 340,
+    baseRamMb: 95,
+    description: 'Catatan cepat dengan dukungan teks kaya & sematan gambar',
+  },
+  {
+    id: 'browser',
+    name: 'Mi Web Browser',
+    icon: 'globe',
+    category: 'productivity',
+    defaultWidth: 860,
+    defaultHeight: 560,
+    minWidth: 480,
+    minHeight: 380,
+    baseRamMb: 240,
+    description: 'Peramban web desktop dengan multi-tab & akselerasi hardware',
+  },
+  {
+    id: 'gallery',
+    name: 'Galeri Foto & Media',
+    icon: 'image',
+    category: 'multimedia',
+    defaultWidth: 760,
+    defaultHeight: 500,
+    minWidth: 420,
+    minHeight: 320,
+    baseRamMb: 130,
+    description: 'Koleksi foto kamera 13MP dan video layar 2.8K 144Hz',
+  },
+  {
+    id: 'taskmgr',
+    name: 'Manajer RAM & Kinerja',
+    icon: 'activity',
+    category: 'system',
+    defaultWidth: 700,
+    defaultHeight: 480,
+    minWidth: 400,
+    minHeight: 320,
+    baseRamMb: 75,
+    description: 'Pantau RAM 8GB + 3GB, hentikan proses latar, dan tingkatkan performa',
+  },
+  {
+    id: 'terminal',
+    name: 'Terminal Linux Android',
+    icon: 'terminal',
+    category: 'tools',
+    defaultWidth: 680,
+    defaultHeight: 440,
+    minWidth: 380,
+    minHeight: 280,
+    baseRamMb: 55,
+    description: 'Shell baris perintah Android dengan perintah neofetch & ps',
+  },
+  {
+    id: 'calculator',
+    name: 'Kalkulator',
+    icon: 'calculator',
+    category: 'tools',
+    defaultWidth: 360,
+    defaultHeight: 500,
+    minWidth: 320,
+    minHeight: 420,
+    baseRamMb: 45,
+    description: 'Kalkulator standar & sains dengan riwayat komputasi',
+  },
+  {
+    id: 'music',
+    name: 'Pemutar Musik',
+    icon: 'music',
+    category: 'multimedia',
+    defaultWidth: 640,
+    defaultHeight: 420,
+    minWidth: 360,
+    minHeight: 300,
+    baseRamMb: 85,
+    description: 'Pemutar audio stereo quad-speaker Dolby Atmos',
+  },
+  {
+    id: 'settings',
+    name: 'Pengaturan DeX',
+    icon: 'settings',
+    category: 'system',
+    defaultWidth: 780,
+    defaultHeight: 540,
+    minWidth: 460,
+    minHeight: 360,
+    baseRamMb: 80,
+    description: 'Kustomisasi wallpaper, refresh rate 144Hz, mouse, dan keyboard',
+  },
+  {
+    id: 'camera',
+    name: 'Kamera Pad 6',
+    icon: 'camera',
+    category: 'multimedia',
+    defaultWidth: 640,
+    defaultHeight: 480,
+    minWidth: 380,
+    minHeight: 320,
+    baseRamMb: 160,
+    description: 'Kamera depan fokus pintar & kamera belakang HDR',
+  },
+  {
+    id: 'appstore',
+    name: 'Pasang Aplikasi Baru',
+    icon: 'download',
+    category: 'tools',
+    defaultWidth: 720,
+    defaultHeight: 500,
+    minWidth: 420,
+    minHeight: 340,
+    baseRamMb: 90,
+    description: 'Pasang aplikasi tambahan untuk dibuka dalam jendela terpisah',
+  },
+];
+
+export const INITIAL_FILES: FileItem[] = [
+  {
+    id: 'file-1',
+    name: 'Prospek_Proyek_2026.txt',
+    type: 'text',
+    size: '14.2 KB',
+    sizeBytes: 14500,
+    updatedAt: '2026-10-20 18:20',
+    parentId: 'doc',
+    content: `# Rencana Multitasking Xiaomi Pad 6
+- Mengaktifkan Samsung DeX style Desktop Mode
+- Mendukung mouse nirkabel & keyboard magnetik
+- Menjalankan 4+ jendela bersamaan dengan lancar
+- Manajemen RAM otomatis agar tidak lagging
+- Fitur drag and drop antar jendela Catatan dan Berkas`,
+  },
+  {
+    id: 'file-2',
+    name: 'Catatan_Meeting_Klien.txt',
+    type: 'text',
+    size: '8.4 KB',
+    sizeBytes: 8600,
+    updatedAt: '2026-10-19 14:15',
+    parentId: 'doc',
+    content: `Meeting Ringkasan:
+1. Pengguna menginginkan produktivitas tablet mirip laptop.
+2. Pengalihan aplikasi cepat dengan Alt + Tab.
+3. Optimasi memori LPDDR5 8GB untuk multitasking berat.`,
+  },
+  {
+    id: 'file-3',
+    name: 'script_performa.sh',
+    type: 'code',
+    size: '3.1 KB',
+    sizeBytes: 3100,
+    updatedAt: '2026-10-18 09:30',
+    parentId: 'code',
+    content: `#!/bin/bash
+# Xiaomi Pad 6 HyperOS Performance Script
+echo "Mengoptimalkan Governor CPU Snapdragon 870..."
+echo "Membersihkan Cache Aplikasi Latar..."
+sync; echo 3 > /proc/sys/vm/drop_caches
+echo "Status: RAM Dioptimalkan!"`,
+  },
+  {
+    id: 'file-4',
+    name: 'Wallpaper_Xiaomi_HyperOS.jpg',
+    type: 'image',
+    size: '2.4 MB',
+    sizeBytes: 2516582,
+    updatedAt: '2026-10-15 11:00',
+    parentId: 'pic',
+    imageUrl: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    id: 'file-5',
+    name: 'Desain_Arsitektur_Tablet.jpg',
+    type: 'image',
+    size: '3.8 MB',
+    sizeBytes: 3984588,
+    updatedAt: '2026-10-14 16:40',
+    parentId: 'pic',
+    imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1600&q=80',
+  },
+  {
+    id: 'file-6',
+    name: 'Dokumentasi_API.txt',
+    type: 'text',
+    size: '21.5 KB',
+    sizeBytes: 22000,
+    updatedAt: '2026-10-10 13:00',
+    parentId: 'download',
+    content: `Dokumentasi API Workstation Mode:
+- window.snapWindow(direction)
+- window.freezeInactive()
+- system.getRamMetrics()`,
+  },
+];
+
+export const INITIAL_WALLPAPERS = [
+  {
+    id: 'hyperos-mountain',
+    name: 'HyperOS Aurora Dark',
+    url: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1920&q=80',
+  },
+  {
+    id: 'galaxy-nebula',
+    name: 'DeX Cosmic Nebula',
+    url: 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1920&q=80',
+  },
+  {
+    id: 'geometric-cyan',
+    name: 'Pad 6 Studio Glass',
+    url: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=1920&q=80',
+  },
+  {
+    id: 'minimal-carbon',
+    name: 'Stealth Carbon Matrix',
+    url: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1920&q=80',
+  },
+];
+
+export const INITIAL_NOTIFICATIONS: SystemNotification[] = [
+  {
+    id: 'notif-1',
+    title: 'Mode Desktop DeX Aktif',
+    message: 'Xiaomi Pad 6 berjalan dalam resolusi 2.8K 144Hz dengan akselerasi multi-window.',
+    time: 'Baru saja',
+    source: 'Sistem HyperOS',
+    icon: 'monitor',
+    read: false,
+    priority: 'high',
+  },
+  {
+    id: 'notif-2',
+    title: 'Keyboard & Mouse Terhubung',
+    message: 'Keyboard Xiaomi Pad 6 dan Mouse Bluetooth siap digunakan dengan pintasan Alt+Tab.',
+    time: '2m yang lalu',
+    source: 'Bluetooth',
+    icon: 'keyboard',
+    read: false,
+  },
+  {
+    id: 'notif-3',
+    title: 'Baterai 88% - Pengisian Cepat 33W',
+    message: 'Suhu baterai normal (31°C). Perkiraan terisi penuh dalam 18 menit.',
+    time: '10m yang lalu',
+    source: 'Manajemen Daya',
+    icon: 'battery-charging',
+    read: true,
+  },
+];
+
+export const INITIAL_SETTINGS: SystemSettings = {
+  wallpaper: INITIAL_WALLPAPERS[0].url,
+  performanceMode: 'performance',
+  totalRamGb: 8,
+  memoryExtensionGb: 3,
+  autoFreezeInactive: true,
+  showFps: true,
+  dockPosition: 'bottom',
+  soundVolume: 75,
+  brightness: 85,
+  wifiEnabled: true,
+  bluetoothEnabled: true,
+  dndEnabled: false,
+  pointerSpeed: 1,
+};
